@@ -1,0 +1,25 @@
+* {
+   border: 1px solid red;
+}
+
+#foo{
+   height: 50px;
+   width: 50px;
+   background-color: green;
+   float: left;
+   margin: 10px;
+}
+#bar{
+   height: 50px;
+   width: 50px;
+   background-color: blue;
+   float: left;
+   margin: 10px;
+}
+#doo{
+   height: 20px;
+   width: 70px;
+   background-color: yellow;
+   float: left;
+
+}

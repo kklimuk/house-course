@@ -13,12 +13,7 @@ var refreshHTML = function(){
   window.idocument = $(window.idocument);
 };
 
-/*var createQuestion = function(){
-   return {
-   questionText = "",
-   verify = ""
-}
-} */
+
 
 var CSS = function(csstring){
    var pieces = csstring.split(":");
@@ -46,6 +41,10 @@ var handleInput = function(){
         verifyQuestion(questions[currentQuestion]);
 
    });
+   $('#giveup').click(function(){
+      showAnswer();
+      advanceQuestion(true);
+   });
 };
 
 var getElementFromIframe = function(selector){
@@ -55,11 +54,6 @@ var getElementFromIframe = function(selector){
 };
 
 var injectCSS = function(selector, css){
-  //console.log("injecting:" +selector +"css"+css);
-
-   //hm = idocument;
-
-   //hmm = elem;
    elem = getElementFromIframe(selector);
    if(elem.length <=0)
    {
@@ -87,10 +81,10 @@ var questionNine = createQuestion("I wonder what will happen if we make hidden-d
 var questionTen = createQuestion("Oh man.. it disappeared again. That is because inline elements determine their width based on their content, whereas block elements take up their entire parents width. We don't want any content in #hidden-div, but I would like to keep it inline. How can I make #hidden-div display it's content in block form, but treat itself as an inline element?",catbasehtml, function(){ return getElementFromIframe('#hidden-div').css("display")==="inline-block";} );
 var questionTenTen = createQuestion("Great. But I still don't see it. Let's give it a width of 50px.",catbasehtml, function(){ return getElementFromIframe('#hidden-div').css("width")==="50px";} );
 var questionEleven = createQuestion("Make #ad-body have a padding top and bottom of 5px",catbasehtml, function(){ return (getElementFromIframe('#ad-body').css("padding")==="5px 0px 5px 0px"||getElementFromIframe('#ad-body').css("padding")==="5px 0px");});
-var questionTwelve = createQuestion("No one likes to be bitten. Make the paragraph ''May bite' size 8 font. Hint: to do this properly you must use a non-trival selector'",catbasehtml, function(){ return getElementFromIframe('#newspaper-base').css("background-image")==="paper.png";} );
+var questionTwelve = createQuestion("No one likes to be bitten. Make the paragraph ''May bite' size 8 font. Hint: to do this properly you must use a non-trival selector'",catbasehtml, function(){ return getElementFromIframe('p:nth-child(1)').css("font-size")==="8px";} );
 var questionThirteen = createQuestion("Center the title (h1)",catbasehtml, function(){ return getElementFromIframe('h1').css("text-align")==="center";} );
 var questionFourteen = createQuestion("Our ad writer was a bit short on words. Let's make the add look bigger by setting a max-width of 250px on the outermost div (#newspaper-base).",catbasehtml, function(){ return getElementFromIframe('h1').css("text-align")==="center";} );
-var questionFifteen = createQuestion("Center #newspaper-base (remember #newspaper-base is a block div)",catbasehtml, function(){ return (getElementFromIframe('#newspaper-base').css("margin")==="auto"||getElementFromIframe('#newspaper-base').css("margin")==="0 auto");} );
+var questionFifteen = createQuestion("Center #newspaper-base (remember #newspaper-base is a block div)",catbasehtml, function(){ return (getElementFromIframe('#newspaper-base').css("margin")==="auto"||getElementFromIframe('#newspaper-base').css("margin")==="0px auto");} );
 
 var questions = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen, questionTenTen, questionEleven, questionTwelve, questionThirteen, questionFourteen, questionFifteen];
 var currentQuestion = 0;
@@ -104,12 +98,12 @@ function createQuestion(text, basehtml, evaluate){
 }
 
 loadQuestion(questionOne, currentQuestion);
-console.log("Okay?");
+//console.log("Okay?");
 
 function loadQuestion(question, questionNumber){
   $('#question_title').text("Question: "+(currentQuestion+1));
   $('#question_text').text(question.question);
-  console.log("I set the text to: " + question.question);
+  //console.log("I set the text to: " + question.question);
 }
 function verifyQuestion(question){
     var valid = question.evaluate();
@@ -121,19 +115,40 @@ function verifyQuestion(question){
       alert("Incorrect. It doesn't seem like you applied the proper css.");
     }
 }
-function advanceQuestion(){
-  if(currentQuestion<questions.length){
-    console.log("advancing quesiton");
+
+function showAnswer(){
+  alert(answers[currentQuestion]);
+}
+
+function advanceQuestion(incorrect){
+  if(currentQuestion<questions.length-1){
+    //console.log("advancing quesiton");
     currentQuestion++;
     loadQuestion(questions[currentQuestion]);
     $('.list-group-item:nth-child('+(currentQuestion+1)+')').addClass('active');
     $('.list-group-item:nth-child('+(currentQuestion)+')').removeClass('active');
-    $('.list-group-item:nth-child('+(currentQuestion)+')').addClass('correct');
+    if(incorrect){
+       $('.list-group-item:nth-child('+(currentQuestion)+')').addClass('incorrect');
+       incorrect++;
+    }
+    else{
+      correct++;
+      $('.list-group-item:nth-child('+(currentQuestion)+')').addClass('correct');
+    }
   }
   else{
-      $('#question_text').text("Great work! It is still pretty ugly, but hopefully you learned some basic css! Submit the score code:" + scoreCode + " on lore. Feel free to try the quiz again if you skipped any questions.");
+    var scoreCode = createScoreCode();
+      $('#question_text').text("Great work! It is still pretty ugly, but hopefully you learned some basic css! Submit the score code:" + scoreCode + "\n on lore. Feel free to try the quiz again if you skipped any questions.");
   }
 }
 
-var answers = ["Selector: p ||CSS: color:gray;"];
+var createScoreCode = function(){
+    var english = $('#name').val()+" time: "+ (new Date()).getTime() + " score: " +correct;
+    console.log(english);
+    var encode = btoa(english);
+    return  encode;
+};
+
+var answers = ["Selector: p || CSS: color:gray;", "Selector: h1 || CSS: font-family: courier;","Selector: #ad-image ||CSS: border: solid black 3px;","Selector: #ad-image ||CSS: width: 100px;","Selector: #ad-image ||CSS: float: left;","Selector: #ad-image ||CSS: margin: 5px 10px 0 0;","Selector: #hidden-div ||CSS: background-color: black;","Selector: #hidden-div || CSS: height: 50px;","Selector: #hidden-div ||CSS: display: inline;","Selector: #hidden-div ||CSS: display: inline-block;","Selector: #ad-body || CSS: padding: 5px 0;","Selector: p:nth-child(1) ||CSS: font-size: 8px;","Selector: h1 ||CSS: text-align: center;","Selector: #newspaper-base || CSS: max-width 250px;","Selector: #newspaper-base ||CSS: margin: 0 auto;","Selector: p ||CSS: color:gray;","Selector: p ||CSS: color:gray;"];
+var correct = 0;
 

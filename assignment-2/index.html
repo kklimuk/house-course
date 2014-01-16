@@ -1,40 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>The Box Model quiz</title>
+   <title>Basic css quiz</title>
 
    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-   <link rel="stylesheet" type="text/css" href="assignment_two.css">
+   <link rel="stylesheet" type="text/css" href="target.css">
 
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+   <!-- Optional theme -->
+   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+
+   <!-- Latest compiled and minified JavaScript -->
+   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assignment_two.css">
+</head>
 <body>
 
-
-
+<div class='container'>
+   <div class="page-header">
         <h1>Basic CSS Quiz</h1>
-        <p class="lead">10 basic css questions. To answer a question, type the appropriate selector in the selector box, and the appropriate css in the css box.</p>
+        <p class="lead">Some basic css questions. To answer the question, type the appropriate selector in the selector box, and the appropriate css in the css box.</p>
+   </div>
+   <div class='row row-offcanvas row-offcanvas-right'>
+   <div class="col-xs-12 col-sm-9">
+    <div class="row">
+       <label for="selector_input">Name:</label>
+       <input type="text" id="name">
+    </div>
+       <div class="row">
          <h1 id="question_title">Question 1</h1>
-         <h3 id="quesiton_text">Change the body background blue.</h3>
-
-       <form>
+         <h3 id="question_text">Change the body background blue.</h3>
+       </div>
+      <div class="row">
+       <form role="form">
                <label for="selector_input">CSS Selector</label>
                </br>
                <input type="text" id="selector_input"/>
                </br>
                <label for="css_input">CSS</label>
-               <textarea type="textarea" id="css_input"  rows="3'"></textarea>
+               <textarea type="textarea" id="css_input" class="form-control" rows="3'"></textarea>
          </form>
        <button id="submit_css">Submit</button>
+       <button id="giveup">Give up :(</button>
     </div>
 
-   <div id="cat-website">
-      <div id="newspaper-base">
-         <h1>Cat in need of home.</h1>
-         <image src ="cat1.jpg" id="ad_image"/>
-         <p>Meet Kiral the kitten. He is a fury Russian cat who really loves html, css and javascript. He doesn't need much food, but really enjoys chicken nuggets and ribs.</p>
-         <div id="hidden-div">
-         </div>
+   <div class="row spacer">
+       <iframe id="iframe" width="800" height="500"></iframe>
+    </div>
+   </div>
+
+    <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+          <ul class="list-group">
+            <li href="#" class="list-group-item active">Question 1</li>
+            <li href="#" class="list-group-item">Question 2</li>
+            <li href="#" class="list-group-item">Question 3</li>
+            <li href="#" class="list-group-item">Question 4</li>
+            <li href="#" class="list-group-item">Question 5</li>
+            <li href="#" class="list-group-item">Question 6</li>
+            <li href="#" class="list-group-item">Question 7</li>
+            <li href="#" class="list-group-item">Question 8</li>
+            <li href="#" class="list-group-item">Question 9</li>
+            <li href="#" class="list-group-item">Question 10</li>
+            <li href="#" class="list-group-item">Question 11</li>
+            <li href="#" class="list-group-item">Question 12</li>
+            <li href="#" class="list-group-item">Question 13</li>
+            <li href="#" class="list-group-item">Question 14</li>
+            <li href="#" class="list-group-item">Question 15</li>
+            <li href="#" class="list-group-item">Question 16</li>
+
+          </ul>
       </div>
    </div>
+
+
+
+</div>
+
+
+
 
 <script src="assignment_two_logic.js"></script>
 </body>

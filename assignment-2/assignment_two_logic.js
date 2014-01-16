@@ -75,7 +75,7 @@ var questionThree =  createQuestion("In one line add a 3px solid black border to
 var questionFour =  createQuestion("Change the width property of #ad-image to 100px.", catbasehtml, function(){return getElementFromIframe('#ad-image').css("width")==="100px";});
 var questionFive =  createQuestion("Make #ad-image float left", catbasehtml, function(){ return getElementFromIframe('#ad-image').css("float")==="left";} );
 var questionSix =  createQuestion("In one line make #ad-image have a top margin of 5px and a right margin of 10px", catbasehtml, function(){ return getElementFromIframe('#ad-image').css("margin")==="5px 10px 0px 0px";} );
-var questionSeven = createQuestion("Make #hidden-div have a black for its background color.'",catbasehtml, function(){ return getElementFromIframe('#hidden-div').css("background-color")==="rgb(0, 0, 0)";} );
+var questionSeven = createQuestion("Make #hidden-div have a black for its background color.",catbasehtml, function(){ return getElementFromIframe('#hidden-div').css("background-color")==="rgb(0, 0, 0)";} );
 var questionEight = createQuestion("Uh-oh! We still cant see #hidden-div. That is because a div is a block level element and its height is determined by its content. But lets force it to have a height of 50px.'",catbasehtml, function(){ return getElementFromIframe('#hidden-div').css("height")==="50px";} );
 var questionNine = createQuestion("I wonder what will happen if we make hidden-div a inline element... try it!",catbasehtml, function(){ return getElementFromIframe('#hidden-div').css("display")==="inline";} );
 var questionTen = createQuestion("Oh man.. it disappeared again. That is because inline elements determine their width based on their content, whereas block elements take up their entire parents width. We don't want any content in #hidden-div, but I would like to keep it inline. How can I make #hidden-div display it's content in block form, but treat itself as an inline element?",catbasehtml, function(){ return getElementFromIframe('#hidden-div').css("display")==="inline-block";} );
@@ -83,8 +83,8 @@ var questionTenTen = createQuestion("Great. But I still don't see it. Let's give
 var questionEleven = createQuestion("Make #ad-body have a padding top and bottom of 5px",catbasehtml, function(){ return (getElementFromIframe('#ad-body').css("padding")==="5px 0px 5px 0px"||getElementFromIframe('#ad-body').css("padding")==="5px 0px");});
 var questionTwelve = createQuestion("No one likes to be bitten. Make the paragraph ''May bite' size 8 font. Hint: to do this properly you must use a non-trival selector'",catbasehtml, function(){ return getElementFromIframe('p:nth-child(1)').css("font-size")==="8px";} );
 var questionThirteen = createQuestion("Center the title (h1)",catbasehtml, function(){ return getElementFromIframe('h1').css("text-align")==="center";} );
-var questionFourteen = createQuestion("Our ad writer was a bit short on words. Let's make the add look bigger by setting a max-width of 250px on the outermost div (#newspaper-base).",catbasehtml, function(){ return getElementFromIframe('h1').css("text-align")==="center";} );
-var questionFifteen = createQuestion("Center #newspaper-base (remember #newspaper-base is a block div)",catbasehtml, function(){ return (getElementFromIframe('#newspaper-base').css("margin")==="auto"||getElementFromIframe('#newspaper-base').css("margin")==="0px auto");} );
+var questionFourteen = createQuestion("Our ad writer was a bit short on words. Let's make the add look bigger by setting a max-width of 250px on the outermost div (#newspaper-base).",catbasehtml, function(){ return getElementFromIframe('#newspaper-base').css("max-width")==="250px";} );
+var questionFifteen = createQuestion("Center #newspaper-base (remember #newspaper-base is a block div)",catbasehtml, function(){ return (getElementFromIframe('#newspaper-base').css("margin")==="auto"||getElementFromIframe('#newspaper-base').css("margin")==="0px auto"||getElementFromIframe('#newspaper-base').css("margin")==="0px 265px"||getElementFromIframe('#newspaper-base').css("margin")==="0px");} );
 
 var questions = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen, questionTenTen, questionEleven, questionTwelve, questionThirteen, questionFourteen, questionFifteen];
 var currentQuestion = 0;
@@ -138,6 +138,7 @@ function advanceQuestion(incorrect){
   }
   else{
     var scoreCode = createScoreCode();
+     $('.code').text("Code: "+scoreCode);
       $('#question_text').text("Great work! It is still pretty ugly, but hopefully you learned some basic css! Submit the score code:" + scoreCode + "\n on lore. Feel free to try the quiz again if you skipped any questions.");
   }
 }
@@ -149,6 +150,6 @@ var createScoreCode = function(){
     return  encode;
 };
 
-var answers = ["Selector: p || CSS: color:gray;", "Selector: h1 || CSS: font-family: courier;","Selector: #ad-image ||CSS: border: solid black 3px;","Selector: #ad-image ||CSS: width: 100px;","Selector: #ad-image ||CSS: float: left;","Selector: #ad-image ||CSS: margin: 5px 10px 0 0;","Selector: #hidden-div ||CSS: background-color: black;","Selector: #hidden-div || CSS: height: 50px;","Selector: #hidden-div ||CSS: display: inline;","Selector: #hidden-div ||CSS: display: inline-block;","Selector: #ad-body || CSS: padding: 5px 0;","Selector: p:nth-child(1) ||CSS: font-size: 8px;","Selector: h1 ||CSS: text-align: center;","Selector: #newspaper-base || CSS: max-width 250px;","Selector: #newspaper-base ||CSS: margin: 0 auto;","Selector: p ||CSS: color:gray;","Selector: p ||CSS: color:gray;"];
+var answers = ["Selector: p || CSS: color:gray;", "Selector: h1 || CSS: font-family: courier;","Selector: #ad-image ||CSS: border: solid black 3px;","Selector: #ad-image ||CSS: width: 100px;","Selector: #ad-image ||CSS: float: left;","Selector: #ad-image ||CSS: margin: 5px 10px 0 0;","Selector: #hidden-div ||CSS: background-color: black;","Selector: #hidden-div || CSS: height: 50px;","Selector: #hidden-div ||CSS: display: inline;","Selector: #hidden-div ||CSS: display: inline-block;","Selector: #hidden-div ||CSS: width: 50px;","Selector: #ad-body || CSS: padding: 5px 0;","Selector: p:nth-child(1) ||CSS: font-size: 8px;","Selector: h1 ||CSS: text-align: center;","Selector: #newspaper-base || CSS: max-width 250px;","Selector: #newspaper-base ||CSS: margin: 0 auto;","Selector: p ||CSS: color:gray;","Selector: p ||CSS: color:gray;"];
 var correct = 0;
 

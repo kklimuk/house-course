@@ -2,16 +2,40 @@
 <html>
 <head>
    <title>The Box Model quiz</title>
-   <link rel="stylesheet" type="text/css" href="target.css">
-</head>
+
+   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="assignment_two.css">
+
 <body>
 
 
-   <div id ="foo"></div>
-   <div id ="bar"></div>
-   <div id="doo"></div>
 
+        <h1>Basic CSS Quiz</h1>
+        <p class="lead">10 basic css questions. To answer a question, type the appropriate selector in the selector box, and the appropriate css in the css box.</p>
+         <h1 id="question_title">Question 1</h1>
+         <h3 id="quesiton_text">Change the body background blue.</h3>
 
+       <form>
+               <label for="selector_input">CSS Selector</label>
+               </br>
+               <input type="text" id="selector_input"/>
+               </br>
+               <label for="css_input">CSS</label>
+               <textarea type="textarea" id="css_input"  rows="3'"></textarea>
+         </form>
+       <button id="submit_css">Submit</button>
+    </div>
 
+   <div id="cat-website">
+      <div id="newspaper-base">
+         <h1>Cat in need of home.</h1>
+         <image src ="cat1.jpg" id="ad_image"/>
+         <p>Meet Kiral the kitten. He is a fury Russian cat who really loves html, css and javascript. He doesn't need much food, but really enjoys chicken nuggets and ribs.</p>
+         <div id="hidden-div">
+         </div>
+      </div>
+   </div>
+
+<script src="assignment_two_logic.js"></script>
 </body>
 </html>

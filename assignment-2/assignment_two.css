@@ -1,0 +1,23 @@
+.spacer {
+    margin-top: 30px; /* define margin as you see fit */
+}
+
+#cat-website{
+   border: 3px solid black;
+   width: 700px;
+   height: 500px;
+}
+
+.correct{
+
+  background-color: green !important;
+}
+
+
+.incorrect{
+
+  background-color: red !important;
+}
+#giveup{
+   margin-left: 100px;
+}

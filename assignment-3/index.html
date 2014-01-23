@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Test</title>
+</head>
+<body>
+
+	<textarea cols="30" rows="10" style="display: block;"></textarea>
+	<button>Process Data</button>
+	<pre><code></code></pre>
+
+	<script type="text/javascript" src="./main.js"></script>
+	<script type="text/javascript">
+	(function() {
+		var textarea = document.querySelector('textarea');
+		var code = document.querySelector('code');
+		document.querySelector('button').addEventListener('click', function() {
+			try {
+				code.innerText = JSON.stringify(window.formatData(JSON.parse(textarea.value)), null, '  ');
+			} catch(error) {
+				window.alert(error);
+			}
+		});
+	})();
+	</script>
+
+</body>
+</html>

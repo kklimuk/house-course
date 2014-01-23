@@ -1,0 +1,124 @@
+article{
+   background-color: green;
+   background-color: #95a5a6;
+   border-radius: 10px;
+
+
+}
+
+body{
+   font-family: source_sans_proregular;
+   padding: 0;
+   margin: 0;
+   background-color: #ecf0f1;
+   position: relative;
+
+}
+
+body nav
+{
+   background-color: #2c3e50;
+   position: fixed;
+   width: 100%;
+   height: 70px;
+   box-shadow: 0 5px 5px #888888;
+   text-align: center;
+   color: white;
+   top: 0;
+   z-index: 2;
+
+}
+
+article table{
+    -webkit-transition: -webkit-transform 1s ease-in-out;
+     transition: transform 1s ease-in-out;
+}
+article table:hover {
+
+  -webkit-transform: rotate3d(0, 1, 1, 30deg);
+
+  transform: rotate3d(0, 1, 1, 30deg);
+}
+
+body main main{
+  box-sizing: border-box;
+  width: 70%;
+  float: left;
+  border-left: 1px dotted black;
+  padding: 5px;
+}
+body main aside{
+  float: left;
+  width: 30%;
+}
+
+nav a:visited, nav a{
+  color: white;
+  text-decoration: none;
+}
+nav a:hover{
+  color: #e74c3c;
+}
+
+nav h1{
+   display: inline;
+
+}
+body header{
+   margin-top: 90px;
+   text-align: center;
+}
+
+nav .linkbox{
+   text-align: center;
+}
+
+body main{
+   max-width: 900px;
+   margin: auto;
+}
+body footer{
+  width: 100%;
+  background-color: #d35400;
+  height: 50px;
+
+
+}
+body footer p{
+   text-align: center;
+}
+body article p:first-of-type:first-letter{
+   font-size: 50px;
+}
+
+body article{
+   padding: 10px;
+   margin-bottom: 10px;
+}
+th{
+  background-color: blue;
+  color: white;
+  padding: 3px;
+}
+tr{
+  background-color: white;
+  border: 1px black solid;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@font-face {
+    font-family: 'source_sans_proregular';
+    src: url('sourcesanspro-regular-webfont.eot');
+    src: url('sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sourcesanspro-regular-webfont.woff') format('woff'),
+         url('sourcesanspro-regular-webfont.ttf') format('truetype'),
+         url('sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

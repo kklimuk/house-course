@@ -45,6 +45,7 @@ Save the screenshot as `achievement.jpg`.
 In this part, we'll take what we've learned about JavaScript and use it to write a program that takes your friendship data from Facebook in the form of JSON (see assigned reading) and clean it into usable form.
 
 Here's how we'll get the data into our assignment:
+
 - Go to [Graph Explorer](https://developers.facebook.com/tools/explorer)
 - Get a new Access Token:
 	- "Get Access Token". 
@@ -61,11 +62,12 @@ Here's how we'll get the data into our assignment:
 - Once you have the data, boot up `index.html` and put the data into the textbox.
 
 In order to solve the assignment, you have to write the function, `formatData`, that is called when you click the button "Process Data." To do this:
+
 - Open `main.js`.
 - Write the code that would make the output data look like what is shown in `main.js`.
 - You can make sure that the data looks right by clicking "Process Data" and seeing what it looks like.
 
-When you are done, save `main.js`.[]
+When you are done, save `main.js`.
 
 ### Required Readings
 - [What is JSON?](http://www.json.org/)

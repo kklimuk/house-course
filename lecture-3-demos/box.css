@@ -1,0 +1,33 @@
+.the_box{
+   border: 2px solid black;
+   padding: 5px;
+   background-color: green;
+   display: inline-block;
+   width: 500px;
+   height: 500px;
+   bottom: 50px;
+   right: -150px;
+
+  /* float: left; */
+  /* box-sizing: border-box; */
+   /*display: inline-block; */
+   /*text-align: center; */
+}
+body{
+   height: 10000px;
+}
+#inner_div{
+   background-color: blue;
+   width: 100px;
+   height: 100px;
+   position: absolute;
+   right: 50px;
+}
+p {
+   width: 700px;
+}
+/*
+div p:first-child{
+   float:; left;
+   width: 100px;
+};*/

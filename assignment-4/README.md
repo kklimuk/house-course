@@ -49,7 +49,7 @@ Here's how we'll get the data into our assignment:
 - Go to [Graph Explorer](https://developers.facebook.com/tools/explorer)
 - Get a new Access Token:
 	- "Get Access Token". 
-	- Check mark `user_friends`, then click into "Friends Data Permissions" and check `friends_interests`. 
+	- Check mark `user_friends`, then click into "Friends Data Permissions" and check `friends_likes`. 
 	- Click "Get Access Token" and accept the permissions dialog.
 - Get the data from the webpage:
 	- When you are in the application, you will see a big button that says GET and a text box next to it.

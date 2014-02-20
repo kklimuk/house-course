@@ -43,7 +43,6 @@ console.log(JSON.stringify((function(friends) {
 				})
 			};
 		});
-		console.log(this.common_map);
 		return getAlike.call(this, atLeast, atMost);
 	}
 

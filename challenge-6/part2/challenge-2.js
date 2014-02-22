@@ -22,6 +22,7 @@ var animals = (function() {
 		this.position.y = y;
 		return this;
 	};
+	//this is good!
 	var apply_mixin = function() {
 		return Array.prototype.reduce.call(arguments, function(self, mixin) {
 			mixin.call(self);

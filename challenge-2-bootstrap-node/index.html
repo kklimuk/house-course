@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap -->
   <!-- Download bootstrap.min.css from http://bit.ly/1bCtI0a -->
-  <link href="bootstrap.min.css" rel="stylesheet">  
+  <link href="bootstrap.min.css" rel="stylesheet">
   <!-- Less -->
   <link rel="stylesheet/less" type="text/css" href="styles.less" />
   <!-- Download less-1.6.1.min.js from http://bit.ly/1f7Lz4K -->
@@ -22,15 +22,15 @@
   <div>
     <div class="row">
       <ul class="nav nav-justified">
-        <li class="col-lg-2"><a href="#jumbotron">Jumbotron</a></li>
-        <li class="col-lg-2"><a href="#thumbnails">Thumbnails</a></li>
-        <li class="col-lg-2"><a href="#table">Table</a></li>
+        <li class="col-lg-4"><a href="#jumbotron">Jumbotron</a></li>
+        <li class="col-lg-4"><a href="#thumbnails">Thumbnails</a></li>
+        <li class="col-lg-4"><a href="#table">Table</a></li>
       </ul>
     </div>
   </header>
   <main>
     <section id="jumbotron" class="container">
-      <div class="jumbotron">
+      <div class="jumbotron" sytle="text-align:center;">
         <h1>Lorem Ipsum!</h1>
         <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
         <p><a class="btn btn-lg btn-success" href="#" role="button">See www.lipsum.com</a></p>
@@ -38,19 +38,19 @@
     </section>
     <section id="thumbnails" class="container">
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-xs-4">
           <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px;" src="data:image/png;base64,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">
           <h2>Thumbnail 1</h2>
           <p>Find the above image at http://getbootstrap.com/components/#thumbnails</p>
           <p><a class="btn btn-default" href="#" role="button">View</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        <div class="col-xs-4">
           <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKsAAAC0CAYAAADraNxXAAAHAElEQVR4Xu2Y6UtVXxSGl6aVU0Vkmn0oJIrSImnSivrX9UMW0oDQqGKzCTlEODRba8ORq797s4+/1/c5IHm7bu+71vO4zt6naWlpaSO46IBAB5qQVYASEUsHkBURZDqArDKoCIqsOCDTAWSVQUVQZMUBmQ4gqwwqgiIrDsh0AFllUBEUWXFApgPIKoOKoMiKAzIdQFYZVARFVhyQ6QCyyqAiKLLigEwHkFUGFUGRFQdkOoCsMqgIiqw4INMBZJVBRVBkxQGZDiCrDCqCIisOyHQAWWVQERRZcUCmA8gqg4qgyIoDMh1AVhlUBEVWHJDpALLKoCIosuKATAeQVQYVQZEVB2Q6gKwyqAiKrDgg0wFklUFFUGTFAZkOIKsMKoIiKw7IdABZZVARFFlxQKYDyCqDiqDIigMyHUBWGVQERVYckOkAssqgIiiy4oBMB5BVBhVBkRUHZDqArDKoCIqsOCDTAWSVQUVQZMUBmQ4gqwwqgiIrDsh0AFllUBEUWXFApgPIKoOKoMiKAzIdQFYZVARFVhyQ6QCyyqAiKLLigEwHkFUGFUGRFQdkOoCsMqgIiqw4INMBZJVBRVBkxQGZDiCrDCqCIisOyHQAWWVQERRZcUCmA8gqg4qgyIoDMh1AVhlUBEVWHJDpALLKoCIosuKATAeQVQYVQZEVB2Q6gKwyqAiKrDgg0wFrWX/8+BF37tyJY8eOxenTpwu0p0+fxurqauzZs2cTYv7cqVOn4vDhw+X/6q37F+KN1s3NzcXLly/j27dvceDAgThz5kx0dnaWX7mwsBCPHz+OjY2NaG9vj6Ghodi7d++/fNyu+xlLWb9//14kePv2bXz+/Dl6enri/PnzBe74+Hisra39B/S5c+eiu7u74bq/mfG3z/v06VPcv3+/LN+/f398+fKlyHjz5s1YX1+Pu3fvbnkvf+bGjRvR1NS062TcqSBLWRcXF+PRo0ebvamV9devX/Hz588yWVPkFKm1tTWuX79eXjda9+TJk/J+Cp1TeHJyMlZWVsr3LS0tDdfNzs5Gfg0ODkZvb2/cu3evrEshq4nb398f+ZXi5tS/cuVKHDx4cCe2u+59S1mTYgr58ePHcoutlbUinLfdnLI53WrlaLSumpA58Y4fPx7v3r0rwt+6dav822hdCj4xMVFu+0ePHi3bgba2thgZGYnp6el48+ZNDAwMlK3K1NTUlte7zsYdCrKVNfuytLQUDx8+rCvr+/fv49mzZ0WgCxcubGljo3UvXrwoW4vqunz5chw6dGjzdb11edvPP4qc6NWVa3JtNUmvXbsWXV1dyPqngRtuf6FVvY2kq52qOeE6Ojr+SdZcNzo6WqZoHpSuXr2647qc7PPz82UanzhxIh48eBBfv36NS5cuxYcPH8pWoNoizMzMxKtXrzYnrRs3JmudyVrdmvP0nbJuP8w0kvz169fl1l1dw8PDm6f6epM85c7pmQe6aqvx/PnzsoXIA13uXXMbkN/39fUVkZeXl+PixYtx5MgRN1cDWevIWkmXgqQo2696subBJw9HKWBO1RR++8m93rpKzvzDyMNZfnZeuQ3ICZ0HujzgZZZ8r7m5OW7fvr3l0ZqLtcj6R9Y8vOQhprqqg0w+zsrDVyNZa9dVUy+lOnv2bIyNjZXnsfk04OTJk+VXVLLWrstbfq6tfVxWuyb3zbl/rq7cP+c+2vGylvX/BDyfOuQk3bdvX5mktVf1Xk7qfAzmeiGrK3nBupFVEJprZGR1JS9YN7IKQnONjKyu5AXrRlZBaK6RkdWVvGDdyCoIzTUysrqSF6wbWQWhuUZGVlfygnUjqyA018jI6kpesG5kFYTmGhlZXckL1o2sgtBcIyOrK3nBupFVEJprZGR1JS9YN7IKQnONjKyu5AXrRlZBaK6RkdWVvGDdyCoIzTUysrqSF6wbWQWhuUZGVlfygnUjqyA018jI6kpesG5kFYTmGhlZXckL1o2sgtBcIyOrK3nBupFVEJprZGR1JS9YN7IKQnONjKyu5AXrRlZBaK6RkdWVvGDdyCoIzTUysrqSF6wbWQWhuUZGVlfygnUjqyA018jI6kpesG5kFYTmGhlZXckL1o2sgtBcIyOrK3nBupFVEJprZGR1JS9YN7IKQnONjKyu5AXrRlZBaK6RkdWVvGDdyCoIzTUysrqSF6wbWQWhuUZGVlfygnUjqyA018jI6kpesG5kFYTmGhlZXckL1o2sgtBcIyOrK3nBupFVEJprZGR1JS9YN7IKQnONjKyu5AXrRlZBaK6RkdWVvGDdyCoIzTUysrqSF6wbWQWhuUZGVlfygnUjqyA018jI6kpesG5kFYTmGhlZXckL1o2sgtBcIyOrK3nBupFVEJprZGR1JS9YN7IKQnONjKyu5AXr/g0N8q5FsPfynQAAAABJRU5ErkJggg==">
           <h2>Thumbnail 2</h2>
           <p>Use col-lg</p>
           <p><a class="btn btn-default" href="#" role="button">View</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        <div class="col-xs-4">
           <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px;" src="data:image/png;base64,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">
           <h2>Thumbnail 3</h2>
           <p>Make sure you center align stuff.</p>

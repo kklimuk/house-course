@@ -35,7 +35,7 @@ You've now learned quite a lot about the nature of JavaScript. So now, we'd like
 - Show tags related to the text documents.
 - Implements keyboard shortcuts for loading documents to edit.
 - Implements an auto-save feature for text documents so that the data is never lost.
-- Find and replace functionality.
+- gd and replace functionality.
 - Looks presentable and usable, with sematically structured with HTML and styled CSS.
 
 You're working on this with your team. So take advantage of Trello for project management. And, as a matter of course, create a GitHub repository and use git for version control.
